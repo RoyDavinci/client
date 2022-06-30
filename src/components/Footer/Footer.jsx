@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
 import Logo from "../../images/malon/logo.png";
 import { Link } from "react-router-dom";
