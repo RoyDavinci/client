@@ -1,0 +1,105 @@
+.roundClass {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+}
+.about-working,
+.about-working p {
+	margin-top: 10px;
+}
+@media screen and (min-width: 841px) {
+	.career__ContainerItems,
+	.workingContainer .position-container h1 {
+		font-size: 18px;
+	}
+	.about-working,
+	.about-working p {
+		display: flex;
+		width: auto;
+	}
+	.roundClass {
+		width: 500px;
+		height: 500px;
+	}
+	.applyContainer {
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
+	.applyContainer .role,
+	.applyContainer .form {
+		width: 80%;
+	}
+	.form form input {
+		width: 93%;
+	}
+}
+.leading-6 {
+	list-style-type: square;
+	padding: 10px;
+}
+@media screen and (max-width: 840px) {
+	.role-item div {
+		padding: 5px 10px;
+		border-radius: 10px;
+	}
+	.career__ContainerItems {
+		font-size: 14px;
+	}
+	.workingContainer .position-container h1 {
+		font-size: 16px;
+		margin: 10px;
+	}
+}
+.about-working p,
+.positionITemContainer span {
+	padding: 10px;
+	margin-right: 10px;
+	border-radius: 20px;
+}
+.positionITemContainer span {
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.about-working p span {
+	margin: 0px 10px;
+}
+.positionITemContainer span i {
+	margin-right: 10px;
+}
+.role-item span {
+	padding: 5px 10px;
+	margin-right: 10px;
+	border-radius: 20px;
+	font-size: 13px;
+}
+.applyContainer {
+	display: grid;
+}
+
+.roleAbout-container ul {
+	list-style-type: disc;
+}
+.form form label {
+	display: block;
+	margin: 10px 0px;
+}
+.form form .input-control {
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin: 10px 0px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.portfoliolinks .input-control i,
+.sociallinks .input-control i {
+	border-radius: 50%;
+	padding: 5px;
+}
+.form form textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px 0px;
+}

@@ -1,0 +1,30 @@
+.hero-textContainer h1 span {
+	background: conic-gradient(
+		from 180deg at 50% 50%,
+		#5792eb 0deg,
+		#f24ae1 90deg,
+		#ff3535 180deg,
+		#febf1e 270deg,
+		#5792eb 360deg
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.hero-textContainer button {
+	background: linear-gradient(to right, #fd7e14, #ea4b1f);
+	width: 161px;
+	height: 52px;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.hero-imgContainer img {
+	width: 431px;
+	height: 500px;
+}
+
+@media screen and (max-width: 840px) {
+	.heroContainer {
+		font-size: 20px;
+	}
+}

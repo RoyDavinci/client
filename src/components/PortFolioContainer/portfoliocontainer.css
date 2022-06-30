@@ -1,0 +1,31 @@
+.portfolioItemContainer button {
+	border-radius: 15px;
+	border-radius: 50px;
+}
+@media screen and (min-width: 841px) {
+	.portfolioItemContainer h1 {
+		font-size: 3rem;
+	}
+	.portfolioItemContainer h2 {
+		font-size: 2.5rem;
+	}
+	.portfolioItemContainer h1 {
+		font-size: 22px;
+	}
+	.portfolioItemContainer button {
+		font-size: 17px;
+		padding: 15px;
+	}
+}
+@media screen and (max-width: 840px) {
+	footer {
+		font-size: 13px;
+	}
+	.head {
+		font-size: 13px 18px;
+	}
+	.portfolioItemContainer button {
+		font-size: 17px;
+		padding: 5px 10px;
+	}
+}

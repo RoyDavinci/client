@@ -1,0 +1,27 @@
+.authContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminFormComponent label,
+.adminFormComponent input {
+    font-size: 25px;
+    display: block;
+    margin: 10px 0px;
+}
+
+.adminFormComponent input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.authContainer__formElement button {
+    padding: 10px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+}

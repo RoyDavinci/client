@@ -1,0 +1,24 @@
+@media screen and (min-width: 767px) {
+    .services-gridContainer {
+        width: 60%;
+    }
+}
+
+.services-gridItem img {
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+}
+.services-gridItem {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+.services-gridItem h3 {
+    font-size: 18px;
+}

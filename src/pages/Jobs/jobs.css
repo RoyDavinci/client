@@ -1,0 +1,10 @@
+.adminJobs__container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.actualJob__editContainer {
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    width: 50%;
+}

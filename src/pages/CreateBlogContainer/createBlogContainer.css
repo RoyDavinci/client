@@ -1,0 +1,24 @@
+.admin__createBlogContainer {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+.admin__createBlogFormContainer form {
+	text-align: 23px;
+}
+.admin__createBlogFormContainer form label {
+	display: block;
+	margin: 15px 0px;
+}
+.admin__createBlogFormContainer form input,
+.admin__createBlogFormContainer form textarea,
+.admin__createBlogContainer__button button {
+	border: 1px solid #ccc;
+	padding: 10px;
+	width: 60%;
+}
+.admin__createBlogContainer__button button {
+	color: white;
+	background-color: blue;
+	margin: 10px 0px;
+	border-radius: 5px;
+}

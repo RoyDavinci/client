@@ -1,0 +1,33 @@
+.admin__CreateTeamContainer {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+.admin__CreateTeamContainer__user form {
+	margin: 10px 0px;
+	padding: 15px;
+	font-size: 23px;
+}
+.admin__CreateTeamContainer__user form label {
+	display: block;
+	margin: 10px 0px;
+}
+.admin__CreateTeamContainer__user form input,
+.admin__CreateTeamContainer__user form textarea,
+.admin__CreateTeamContainer__user form button {
+	width: 80%;
+}
+.admin__CreateTeamContainer__user form input {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.admin__CreateTeamContainer__user form textarea {
+	border: 1px solid #ccc;
+}
+.admin__CreateTeamContainer__user form button {
+	padding: 10px;
+	text-align: center;
+	background-color: blueviolet;
+	color: white;
+	border-radius: 5px;
+	margin: 10px 0px;
+}

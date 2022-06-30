@@ -1,0 +1,25 @@
+.img_aboutContainer {
+	background-image: conic-gradient(
+		from 180deg at 50% 50%,
+		#5792eb 0deg,
+		#f24ae1 90deg,
+		#ff3535 180deg,
+		#febf1e 270deg,
+		#5792eb 360deg
+	);
+	padding: 10px;
+}
+.img_aboutContainer img {
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 840px) {
+	.aboutContainer {
+		font-size: 15px;
+	}
+}
+@media screen and (min-width: 841px) {
+	.aboutContainer {
+		font-size: 25px;
+	}
+}

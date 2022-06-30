@@ -1,0 +1,14 @@
+.appBar-btn {
+    background: linear-gradient(to right, #fd7e14, #ea4b1f);
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background: none !important;
+}
+.texts {
+    color: black !important;
+}

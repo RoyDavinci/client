@@ -1,0 +1,22 @@
+.contactUs-container label {
+	display: block;
+	margin: 10px 0px;
+}
+.talkToUs-form .inputItems input,
+.talkToUs-form .selectItems select {
+	border: 1px solid #b9b9b9;
+	border-radius: 5px;
+	width: 100%;
+}
+.talkToUs-form form textarea {
+	width: 100%;
+	border: 1px solid #b9b9b9;
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+@media screen and (max-width: 840px) {
+	.talkToUs-text {
+		margin: 15px;
+	}
+}

@@ -1,0 +1,4 @@
+.admin__CreateJobsContainer {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}

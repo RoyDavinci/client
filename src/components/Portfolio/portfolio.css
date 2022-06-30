@@ -1,0 +1,9 @@
+.portfolioImage__container {
+	overflow-x: hidden;
+}
+
+@media screen and (min-width: 841px) {
+	.portfolioContainer img {
+		width: 70%;
+	}
+}
