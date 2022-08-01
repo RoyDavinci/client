@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./portfolio.css";
 import Jekawin from "../../images/jekawin.png";
 import ChurchVest from "../../images/churchvest.png";
 import { defaultState } from "../../features/state/stateSlice";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const data = [Jekawin, ChurchVest];
@@ -34,6 +33,18 @@ export const Portfolio = () => {
 		setImageData(data[index]);
 	};
 
+	useEffect(() => {
+		const myInterval = setInterval(() => {
+			if (index === data.length - 1) {
+				setIndex(0);
+			} else {
+				setIndex(index + 1);
+			}
+			setImageData(data[index]);
+		}, 1000);
+		return () => clearInterval(myInterval);
+	}, [index]);
+
 	return (
 		<div className='portfolioContainer md:p-12 p-4  my-4'>
 			<h1
@@ -45,16 +56,16 @@ export const Portfolio = () => {
 			>
 				Portfolios
 			</h1>
-			<div className='portfolioImage__container flex md:flex-row flex-col justify-center items-center text-center'>
+			<div className='portfolioImage__container flex  justify-center items-center text-center'>
 				<i
-					className='fa-solid fa-angle-left text-3xl'
+					className='fa-solid fa-angle-left text-3xl cursor-pointer'
 					onClick={prevFunction}
 				></i>
 				<Link to='/portfolio'>
 					<img src={imageData} alt='' className=' ' />
 				</Link>
 				<i
-					className='fa-solid fa-angle-right text-3xl'
+					className='fa-solid fa-angle-right text-3xl cursor-pointer'
 					onClick={nextFunction}
 				></i>
 				{/* <img src={ChurchVest} alt='' className='md:p-4 my-4' /> */}

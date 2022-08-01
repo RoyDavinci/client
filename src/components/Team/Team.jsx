@@ -3,15 +3,19 @@ import "./team.css";
 import FirstImage from "../../images/users/unsplash_8YG31Xn4dSw.png";
 import SecondImage from "../../images/users/unsplash_A3MleA0jtoE.png";
 import ThirdImage from "../../images/users/unsplash_ABuzWPku1Ug.png";
+import OyenFirst from "../../images/oyen/oyen.jpg";
+import OyenSecond from "../../images/oyen/oyen1.jpg";
+import EmmaunelFirst from "../../images/emmanuel/emmanuel.jpg";
+import EmmanuelSecond from "../../images/emmanuel/emmanuel1.jpg";
 
 const teams = [
 	{
 		id: 1,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: ThirdImage,
+		name: "Oyen Avanrenren",
+		title: "Project/Product Manager and Scrum Master",
+		image: OyenFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: SecondImage,
+		secondImage: OyenSecond,
 	},
 	{
 		id: 2,
@@ -47,11 +51,11 @@ const teams = [
 	},
 	{
 		id: 6,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: SecondImage,
+		name: "Emmanuel Chidera",
+		title: "Backend Developer",
+		image: EmmaunelFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: FirstImage,
+		secondImage: EmmanuelSecond,
 	},
 	{
 		id: 7,
@@ -99,11 +103,13 @@ export const Team = () => {
 							}`}
 							onMouseEnter={() => onHovered(index)}
 						>
-							<img
-								src={teamMember === index ? team.secondImage : team.image}
-								alt=''
-								className=''
-							/>
+							<div className='teamMember__imageContainerPerson'>
+								<img
+									src={teamMember === index ? team.secondImage : team.image}
+									alt=''
+									className=''
+								/>
+							</div>
 							<div
 								className={
 									teamMember === index
@@ -111,8 +117,8 @@ export const Team = () => {
 										: "teanContainer__detailsContainer__person teamHide"
 								}
 							>
-								<p>{team.name}</p>
-								<p>{team.title}</p>
+								<p className='teamMember__namePerson'>{team.name}</p>
+								<p className='teamMember__nameTitle'>{team.title}</p>
 							</div>
 							<div
 								className={
@@ -121,7 +127,7 @@ export const Team = () => {
 										: "teamContainer__socialMedia__items teamHide"
 								}
 							>
-								<i className='fa-brands fa-facebook'></i>
+								<i className='fa-brands fa-linkedin'></i>
 								<i className='fa-brands fa-twitter'></i>
 								<i className='fa-brands fa-instagram'></i>
 							</div>

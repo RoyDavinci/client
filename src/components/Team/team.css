@@ -58,6 +58,12 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 0;
 	}
+	.teamMember__imageContainerPerson img {
+		width: 294px;
+		height: 396px;
+		/* object-fit: contain; */
+		border-radius: 10px;
+	}
 }
 
 .team-imageContainer-item {
@@ -66,7 +72,7 @@
 .teanContainer__detailsContainer__person,
 .teamContainer__socialMedia__items {
 	position: absolute;
-	color: #5792eb;
+	color: #fff;
 }
 .teanContainer__detailsContainer__person {
 	bottom: 0;
@@ -87,4 +93,9 @@
 }
 .teamHide {
 	display: none;
+}
+.teamMember__nameTitle {
+	font-style: italic;
+	color: #f5d7bf;
+	font-weight: 700;
 }

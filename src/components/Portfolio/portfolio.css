@@ -1,16 +1,18 @@
 .portfolioImage__container {
-	overflow-x: hidden;
+	flex-direction: row;
 }
 
-/* @media screen and (min-width: 841px) {
-	.portfolioContainer img {
-		width: 70%;
+@media screen and (min-width: 841px) {
+	.portfolioImage__container i {
+		font-size: 40px;
+		margin: 0px 20px;
 	}
-} */
-.portfolioImage__container i {
-	font-size: 40px;
-	margin: 0px 20px;
+	/* .portfolioImage__container img {
+		width: 90%;
+	} */
 }
-.portfolioImage__container img {
-	width: 90%;
+
+.portfolioImage__container i {
+	font-size: 20px;
+	margin: 0px 20px;
 }
