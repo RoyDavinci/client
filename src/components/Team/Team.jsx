@@ -4,13 +4,14 @@ import FirstImage from "../../images/users/unsplash_8YG31Xn4dSw.png";
 import SecondImage from "../../images/users/unsplash_A3MleA0jtoE.png";
 import ThirdImage from "../../images/users/unsplash_ABuzWPku1Ug.png";
 
-const team = [
+const teams = [
 	{
 		id: 1,
 		name: "John Doe",
 		title: "CEO and Founder",
 		image: ThirdImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: SecondImage,
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ const team = [
 		title: "CEO and Founder",
 		image: FirstImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: ThirdImage,
 	},
 	{
 		id: 3,
@@ -25,6 +27,7 @@ const team = [
 		title: "CEO and Founder",
 		image: SecondImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: FirstImage,
 	},
 	{
 		id: 4,
@@ -32,6 +35,7 @@ const team = [
 		title: "CEO and Founder",
 		image: ThirdImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: FirstImage,
 	},
 	{
 		id: 5,
@@ -39,6 +43,7 @@ const team = [
 		title: "CEO and Founder",
 		image: FirstImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: ThirdImage,
 	},
 	{
 		id: 6,
@@ -46,6 +51,7 @@ const team = [
 		title: "CEO and Founder",
 		image: SecondImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: FirstImage,
 	},
 	{
 		id: 7,
@@ -53,6 +59,7 @@ const team = [
 		title: "CEO and Founder",
 		image: ThirdImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: SecondImage,
 	},
 	{
 		id: 8,
@@ -60,20 +67,15 @@ const team = [
 		title: "CEO and Founder",
 		image: FirstImage,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
+		secondImage: ThirdImage,
 	},
 ];
 
 export const Team = () => {
-	const [member, setMember] = useState([]);
+	const [teamMember, setTeamMember] = useState();
 
-	const handleHover = (index) => {
-		const element = team.find((item) => item.id === index);
-		if (element) {
-			if (member.length > 0) {
-				member.pop();
-			}
-			setMember([element]);
-		}
+	const onHovered = (id) => {
+		setTeamMember(id);
 	};
 
 	return (
@@ -85,56 +87,47 @@ export const Team = () => {
 				We love what we do and we do it with passion. We value the
 				experimentation of the message and smart incentives.
 			</p>
-			<div
-				className={
-					member.length === 0
-						? "teamContainer-detailsContainer"
-						: "teamContainer-detailsContainer"
-				}
-			>
-				{member.length === 0
-					? team.map((team) => {
-							return (
-								<div
-									key={team.id}
-									className={`${
-										team.id % 2 === 0
-											? "team-imageContainer-item margin cursor-pointer"
-											: "team-imageContainer-item cursor-pointer"
-									}`}
-									onMouseEnter={() => handleHover(team.id)}
-								>
-									<img src={team.image} alt='' className='sm:my-4' />
-								</div>
-							);
-					  })
-					: member.map((person) => {
-							return (
-								<div key={person.id} className='owner'>
-									<div className='outer'>
-										<div className='middle'>
-											<div className='inner'>
-												<img src={person.image} alt='' />
-											</div>
-										</div>
-									</div>
-									<div className='detail my-4 text-2xl'>
-										<p>{person.name}</p>
-										<p>{person.title}</p>
-									</div>
-									<div className='social'>
-										{person.social.map((item, id) => {
-											return (
-												<i
-													key={id}
-													className={`fa-brands fa-${item} cursor-pointer`}
-												></i>
-											);
-										})}
-									</div>
-								</div>
-							);
-					  })}
+			<div className='teamContainer-detailsContainer'>
+				{teams.map((team, index) => {
+					return (
+						<div
+							key={team.id}
+							className={`${
+								team.id % 2 === 0
+									? "team-imageContainer-item cursor-pointer"
+									: "team-imageContainer-item cursor-pointer"
+							}`}
+							onMouseEnter={() => onHovered(index)}
+						>
+							<img
+								src={teamMember === index ? team.secondImage : team.image}
+								alt=''
+								className=''
+							/>
+							<div
+								className={
+									teamMember === index
+										? "teanContainer__detailsContainer__person teamShow"
+										: "teanContainer__detailsContainer__person teamHide"
+								}
+							>
+								<p>{team.name}</p>
+								<p>{team.title}</p>
+							</div>
+							<div
+								className={
+									teamMember === index
+										? "teamContainer__socialMedia__items teamShow"
+										: "teamContainer__socialMedia__items teamHide"
+								}
+							>
+								<i className='fa-brands fa-facebook'></i>
+								<i className='fa-brands fa-twitter'></i>
+								<i className='fa-brands fa-instagram'></i>
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);

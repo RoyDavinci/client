@@ -59,3 +59,32 @@
 		grid-gap: 0;
 	}
 }
+
+.team-imageContainer-item {
+	position: relative;
+}
+.teanContainer__detailsContainer__person,
+.teamContainer__socialMedia__items {
+	position: absolute;
+	color: #5792eb;
+}
+.teanContainer__detailsContainer__person {
+	bottom: 0;
+	left: 50%; /* Position X halfway in */
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+.teamContainer__socialMedia__items {
+	top: 50%;
+	transform: rotate(92deg);
+	left: -12px;
+}
+.teamContainer__socialMedia__items i {
+	margin-left: 6px;
+}
+.teamShow {
+	display: block;
+}
+.teamHide {
+	display: none;
+}

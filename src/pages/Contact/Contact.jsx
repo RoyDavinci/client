@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Footer, Header } from "../../components";
 import White from "../../images/white-contact.png";
 import Black from "../../images/black-contact.png";
 import ContactImage from "../../images/image.png";
 import "./contact.css";
 import { defaultState } from "../../features/state/stateSlice";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { submitContact } from "../../features/api/service/contact";
 
 export const Contact = () => {
 	const initial = useSelector(defaultState);
+	const dispatch = useDispatch();
+	const [contactDetails, setContactDetails] = useState({
+		fullName: "",
+		email: "",
+		phone: "",
+		message: "",
+		inquiry: "",
+		applicationbuild: "",
+		budget: "",
+	});
+
+	const contactDetail = (e) => {
+		const { name, value } = e.target;
+		setContactDetails({ ...contactDetails, [name]: value });
+	};
+	console.log(contactDetails);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const { fullName, email, phone, message, inquiry } = contactDetails;
+		dispatch(submitContact({ fullName, email, phone, message, inquiry }));
+	};
 
 	return (
 		<div className='contactUs-container'>
@@ -21,7 +44,7 @@ export const Contact = () => {
 						<h1 className='font-bold'>
 							Have an idea or feedback? <br /> Let's discuss{" "}
 						</h1>
-						<p>Thank you for getting in touch!</p>
+						{/* <p>Thank you for getting in touch!</p> */}
 					</div>
 					<div className='heroImg'>
 						<img src={!initial ? Black : White} alt='' />
@@ -41,14 +64,21 @@ export const Contact = () => {
 					<p>We Will Talk To You</p>
 				</div>
 				<div className='talkToUs-form'>
-					<form action='' className='border border-[#ccc] rounded-lg p-8'>
+					<form
+						action=''
+						className='border border-[#ccc] rounded-lg p-8'
+						onSubmit={handleSubmit}
+					>
 						<div className='inputItems'>
-							<label htmlFor='first-name'>First Name</label>
+							<label htmlFor='first-name'>Full Name</label>
 							<input
 								type='text'
-								placeholder='first Name'
+								placeholder='Full Name'
 								id='first-name'
 								className='border border-[#ccc] p-4'
+								value={contactDetails.fullName}
+								name='fullName'
+								onChange={contactDetail}
 							/>
 						</div>
 						<div className='inputItems'>
@@ -58,6 +88,9 @@ export const Contact = () => {
 								placeholder='email'
 								id='email'
 								className='border border-[#ccc] p-4'
+								value={contactDetails.email}
+								name='email'
+								onChange={contactDetail}
 							/>
 						</div>
 						<div className='inputItems'>
@@ -67,22 +100,75 @@ export const Contact = () => {
 								placeholder='Phone Number'
 								id='number'
 								className='border border-[#ccc] p-4'
+								value={contactDetails.phone}
+								name='phone'
+								onChange={contactDetail}
 							/>
 						</div>
 						<div className='selectItems'>
 							<label htmlFor='reason'>Reason For Contact</label>
-							<select name='' id='reason' className='p-4'>
-								<option value=''>General Inquiry/Feedback</option>
+							<select
+								name='inquiry'
+								id='reason'
+								className='p-4'
+								value={contactDetails.inquiry}
+								onChange={contactDetail}
+							>
+								<option value=''>Select An Option</option>
+								<option value='General Inquiry'>
+									General Inquiry/Feedback
+								</option>
+								<option value='App Build'>Web/Mobile App Build</option>
 							</select>
 						</div>
+						{contactDetails.inquiry === "App Build" ? (
+							<div className='inputItems'>
+								<label htmlFor='budget'>Budget</label>
+								<input
+									type='text'
+									name='budget'
+									id='budget'
+									value={contactDetails.budget}
+									onChange={contactDetail}
+									placeholder='Budget'
+									className='p-4'
+								/>
+							</div>
+						) : (
+							""
+						)}
+						{contactDetails.inquiry === "App Build" ? (
+							<div className='selectItems'>
+								<label htmlFor='application'>Application Type</label>
+								<select
+									name='applicationbuild'
+									id='application'
+									className='p-4'
+									onChange={contactDetail}
+								>
+									<option value=''>Pick a Choice</option>
+									<option value='web'>Web Application</option>
+									<option value='mobile'>Mobile Application</option>
+									<option value='web-mobile'>Web andMobile Application</option>
+								</select>
+							</div>
+						) : (
+							""
+						)}
 						<div className='text-area'>
-							<label htmlFor='message'>Your Message</label>
+							<label htmlFor='message'>
+								{contactDetails.inquiry === "App Build"
+									? "Your Brief"
+									: "Your Message"}
+							</label>
 							<textarea
-								name=''
+								name='message'
 								id=''
 								cols={30}
 								rows={10}
 								placeholder='Type Inquiry'
+								value={contactDetails.message}
+								onChange={contactDetail}
 								className={`${!initial ? "bg-[#040c28]" : "bg-[#fff]"}`}
 							></textarea>
 						</div>

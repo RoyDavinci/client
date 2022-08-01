@@ -2,8 +2,15 @@
 	overflow-x: hidden;
 }
 
-@media screen and (min-width: 841px) {
+/* @media screen and (min-width: 841px) {
 	.portfolioContainer img {
 		width: 70%;
 	}
+} */
+.portfolioImage__container i {
+	font-size: 40px;
+	margin: 0px 20px;
+}
+.portfolioImage__container img {
+	width: 90%;
 }

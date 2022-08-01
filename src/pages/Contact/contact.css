@@ -14,9 +14,16 @@
 	padding: 10px;
 	margin: 10px 0px;
 }
+.heroText h1 {
+	font-size: 40px;
+}
 
 @media screen and (max-width: 840px) {
 	.talkToUs-text {
 		margin: 15px;
 	}
+}
+
+.selectItems select option {
+	color: black;
 }

@@ -10,6 +10,23 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.hero-textContainer h1 span::before {
+	content: "Design";
+	animation: animate infinite 5s ease;
+}
+@keyframes animate {
+	0% {
+		content: "Design";
+	}
+
+	50% {
+		content: "Build";
+	}
+
+	80% {
+		content: "Deploy";
+	}
+}
 .hero-textContainer button {
 	background: linear-gradient(to right, #fd7e14, #ea4b1f);
 	width: 161px;

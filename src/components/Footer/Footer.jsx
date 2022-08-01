@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.css";
 import Logo from "../../images/malon/logo.png";
 import { Link } from "react-router-dom";
@@ -13,11 +13,11 @@ export const Footer = () => {
 				<div className='services'>
 					<ul className='footer-list'>
 						<li>
-							<h1 className='head'>Services</h1>
+							<h1 className='head'>Other Links</h1>
 						</li>
-						<li>Infrastructure Solution</li>
-						<li>Web and Mobile Solution</li>
-						<li>Solution Development</li>
+						<li>Piracy Policy</li>
+						<li>Terms of Conditions</li>
+						<li>Mode of Opertion</li>
 						<li>Consultancy and Support</li>
 					</ul>
 				</div>
@@ -27,18 +27,22 @@ export const Footer = () => {
 							<h1 className='head'>Quick Links</h1>
 						</li>
 						<li>About Us</li>
-						<li>Our Services</li>
-						<li>Our Work</li>
-						<li>Careers</li>
+						<li>Services</li>
+						<li>
+							<Link to='/portfolio'>Portfolios</Link>
+						</li>
+						<li>
+							<Link to='/careers'>Careers</Link>
+						</li>
+						<li>
+							<Link to='/'>What's New</Link>
+						</li>
 					</ul>
 				</div>
 				<div className='email'>
-					<h1 className='head'>Email Us</h1>
-					<p>hello@malonglobal.com</p>
-				</div>
-				<div className='call'>
-					<h1 className='head'>Call Us</h1>
-					<p>+123-456-789-01</p>
+					<h1 className='head'>Contact Us</h1>
+					<p>- info@malonglobaltech.com</p>
+					<p>- 07026997992</p>
 					<div className='socials my-4'>
 						<i className='fa-brands fa-facebook-f'></i>
 						<i className='fa-brands fa-twitter'></i>
@@ -46,15 +50,12 @@ export const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className='footer-displayItem md:flex md:justify-between'>
+			<div className='footer-displayItem md:flex '>
 				<div className='span my-4 sm:my-0'>
 					<Link to='/'>Privacy Policy</Link>
 					<Link to='/'>Terms and Conditions</Link>
 				</div>
-				<p className='copy'>
-					{" "}
-					Copyright © 2022 Malon Tech. All Rights Reserved
-				</p>
+				<p className='copy'>Copyright © 2022 Malon Tech. All Rights Reserved</p>
 			</div>
 		</footer>
 	);

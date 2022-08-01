@@ -4,9 +4,35 @@ import Jekawin from "../../images/jekawin.png";
 import ChurchVest from "../../images/churchvest.png";
 import { defaultState } from "../../features/state/stateSlice";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const data = [Jekawin, ChurchVest];
 
 export const Portfolio = () => {
+	const [index, setIndex] = useState(0);
+	const [imageData, setImageData] = useState(data[index]);
+
 	const initial = useSelector(defaultState);
+
+	const nextFunction = () => {
+		if (index === data.length - 1) {
+			setIndex(0);
+		} else {
+			setIndex(index + 1);
+		}
+
+		setImageData(data[index]);
+	};
+
+	const prevFunction = () => {
+		if (index === 0) {
+			setIndex(data.length - 1);
+		} else {
+			setIndex(index - 1);
+		}
+		setImageData(data[index]);
+	};
 
 	return (
 		<div className='portfolioContainer md:p-12 p-4  my-4'>
@@ -20,8 +46,18 @@ export const Portfolio = () => {
 				Portfolios
 			</h1>
 			<div className='portfolioImage__container flex md:flex-row flex-col justify-center items-center text-center'>
-				<img src={Jekawin} alt='' className='md:p-4 my-4 ' />
-				<img src={ChurchVest} alt='' className='md:p-4 my-4' />
+				<i
+					className='fa-solid fa-angle-left text-3xl'
+					onClick={prevFunction}
+				></i>
+				<Link to='/portfolio'>
+					<img src={imageData} alt='' className=' ' />
+				</Link>
+				<i
+					className='fa-solid fa-angle-right text-3xl'
+					onClick={nextFunction}
+				></i>
+				{/* <img src={ChurchVest} alt='' className='md:p-4 my-4' /> */}
 			</div>
 			<button></button>
 		</div>
