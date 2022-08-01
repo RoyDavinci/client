@@ -1,7 +1,6 @@
 {
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "http://localhost:8100",
 	"dependencies": {
 		"@emotion/react": "^11.9.3",
 		"@emotion/styled": "^11.9.3",
