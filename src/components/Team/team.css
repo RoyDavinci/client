@@ -46,6 +46,9 @@
 	.teamContainer-detailsContainer {
 		display: grid;
 	}
+	.team-imageContainer-item {
+		margin: 10px 0px;
+	}
 }
 
 @media screen and (min-width: 841px) {
@@ -61,24 +64,26 @@
 	.teamMember__imageContainerPerson img {
 		width: 294px;
 		height: 396px;
-		/* object-fit: contain; */
-		border-radius: 10px;
 	}
 }
 
 .team-imageContainer-item {
 	position: relative;
 }
-.teanContainer__detailsContainer__person,
+.teamMember__personContainer,
 .teamContainer__socialMedia__items {
 	position: absolute;
 	color: #fff;
 }
-.teanContainer__detailsContainer__person {
-	bottom: 0;
-	left: 50%; /* Position X halfway in */
-	transform: translate(-50%, -50%);
-	width: 100%;
+.teamMember__personContainer {
+	bottom: 15px;
+	text-align: center;
+	width: 80%;
+	background-color: black;
+	opacity: 0.8;
+	/* margin: 0 auto; */
+	transform: translate(-50%, 0);
+	left: 45%;
 }
 .teamContainer__socialMedia__items {
 	top: 50%;
@@ -98,4 +103,7 @@
 	font-style: italic;
 	color: #f5d7bf;
 	font-weight: 700;
+}
+.teamMember__imageContainerPerson img {
+	border-radius: 10px;
 }

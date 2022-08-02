@@ -1,53 +1,62 @@
 import React, { useState } from "react";
 import "./team.css";
 import FirstImage from "../../images/users/unsplash_8YG31Xn4dSw.png";
-import SecondImage from "../../images/users/unsplash_A3MleA0jtoE.png";
 import ThirdImage from "../../images/users/unsplash_ABuzWPku1Ug.png";
-import OyenFirst from "../../images/oyen/oyen.jpg";
-import OyenSecond from "../../images/oyen/oyen1.jpg";
-import EmmaunelFirst from "../../images/emmanuel/emmanuel.jpg";
-import EmmanuelSecond from "../../images/emmanuel/emmanuel1.jpg";
+import OyenFirst from "../../images/oyen/oyen.JPG";
+import OyenSecond from "../../images/oyen/FDF91F93-CDE5-4516-B470-B271AC92A7D7.JPG";
+import EmmaunelFirst from "../../images/emmanuel/emmanuel2.JPG";
+import EmmanuelSecond from "../../images/emmanuel/photo_2022-08-01_15-20-21.jpg";
+import KolaFirst from "../../images/kola/kola.PNG";
+import KolaSecond from "../../images/kola/photo_2022-08-01_15-16-06.jpg";
+import GladysFirst from "../../images/gladys/photo_2022-08-01_15-29-35.jpg";
+import GladysSecond from "../../images/gladys/gladys2.jpg";
+import RoyFirst from "../../images/roy/photo_2022-08-01_15-17-45.jpg";
+import RoySecond from "../../images/roy/photo_2022-08-01_15-17-45.jpg";
+import IsaacFirst from "../../images/isaac/isaac.jpg";
+import IsaacSecond from "../../images/isaac/isaac1.HEIC";
+import OlamideFirst from "../../images/olamide/3ACF9F54-0E12-427A-94B9-F1EC0224EB6C.JPG";
+import OlamideSecond from "../../images/olamide/photo_2022-08-01_15-25-24.jpg";
 
 const teams = [
 	{
 		id: 1,
 		name: "Oyen Avanrenren",
-		title: "Project/Product Manager and Scrum Master",
+		title: "Project Manager and Scrum Master",
 		image: OyenFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
 		secondImage: OyenSecond,
 	},
 	{
 		id: 2,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: FirstImage,
+		name: "MAthias Roy",
+		title: "FullStack Developer",
+		image: RoyFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: ThirdImage,
+		secondImage: RoySecond,
 	},
 	{
 		id: 3,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: SecondImage,
+		name: "Kola",
+		title: "Mobile App Developer",
+		image: KolaFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: FirstImage,
+		secondImage: KolaSecond,
 	},
 	{
 		id: 4,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: ThirdImage,
+		name: "Gladys Glo",
+		title: "HR ",
+		image: GladysFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: FirstImage,
+		secondImage: GladysSecond,
 	},
 	{
 		id: 5,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: FirstImage,
+		name: "Isaac Warri",
+		title: "FrontEnd Developer",
+		image: IsaacFirst,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: ThirdImage,
+		secondImage: IsaacSecond,
 	},
 	{
 		id: 6,
@@ -59,11 +68,11 @@ const teams = [
 	},
 	{
 		id: 7,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: ThirdImage,
+		name: "Olamide  Omotere",
+		title: "Principal Consultant",
+		image: OlamideSecond,
 		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: SecondImage,
+		secondImage: OlamideFirst,
 	},
 	{
 		id: 8,
@@ -117,8 +126,10 @@ export const Team = () => {
 										: "teanContainer__detailsContainer__person teamHide"
 								}
 							>
-								<p className='teamMember__namePerson'>{team.name}</p>
-								<p className='teamMember__nameTitle'>{team.title}</p>
+								<div className='teamMember__personContainer'>
+									<p className='teamMember__namePerson'>{team.name}</p>
+									<p className='teamMember__nameTitle'>{team.title}</p>
+								</div>
 							</div>
 							<div
 								className={
