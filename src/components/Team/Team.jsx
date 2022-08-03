@@ -11,7 +11,7 @@ import GladysSecond from "../../images/gladys/gladys2.jpg";
 import RoyFirst from "../../images/roy/photo_2022-08-01_15-17-45.jpg";
 import RoySecond from "../../images/roy/photo_2022-08-01_15-17-45.jpg";
 import IsaacFirst from "../../images/isaac/isaac.jpg";
-import IsaacSecond from "../../images/isaac/isaac1.HEIC";
+import IsaacSecond from "../../images/isaac/isaac31.jpg";
 import OlamideFirst from "../../images/olamide/3ACF9F54-0E12-427A-94B9-F1EC0224EB6C.JPG";
 import OlamideSecond from "../../images/olamide/photo_2022-08-01_15-25-24.jpg";
 import RachelFirst from "../..//images/rachel/rachel.jpeg";
@@ -55,7 +55,7 @@ const teams = [
 		image: RoyFirst,
 		social: [
 			{
-				"facebook":"/",
+				link:"/",
 				icon:"fab fa-facebook-f"
 			}, 
 			{
@@ -81,7 +81,7 @@ const teams = [
 		image: KolaFirst,
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fab fa-facebook-f"
 			}, 
 			{
@@ -107,7 +107,7 @@ const teams = [
 		image: GladysFirst,
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fa-brands fa-facebook-f"
 			}, 
 			{
@@ -133,7 +133,7 @@ const teams = [
 		image: IsaacFirst,
 		social: [
 			{
-				"facebook":"/",
+				link:"/",
 				icon:"fa-brands fa-facebook-f"
 			}, 
 			{
@@ -159,7 +159,7 @@ const teams = [
 		image: EmmaunelFirst,
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fab fa-facebook-f",
 			}, 
 			{
@@ -185,7 +185,7 @@ const teams = [
 		image: OlamideSecond,
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fab fa-facebook-f"
 			}, 
 			{
@@ -212,7 +212,7 @@ const teams = [
 		
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fab fa-facebook-f"
 			}, 
 			{
@@ -238,7 +238,7 @@ const teams = [
 		image: JoshuaFirst,
 		social: [
 			{
-				"facebook":"",
+				link:"/",
 				icon:"fab fa-facebook-f"
 			}, 
 			{
@@ -319,15 +319,13 @@ export const Team = () => {
 							>
 								{team.social.map((social, index) => {
 									return (
-										<>
 											<a
 											key={index}
 											href={social.link}
-											className='teamContainer__socialMedia__items__item'
+											className='teamContainer__socialMedia__items__item cursor-pointer'
 										>
 											<i className={`${social.icon}`}></i>
 										</a>
-										</>
 									);
 								})}
 							</div>
