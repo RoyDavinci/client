@@ -17,9 +17,9 @@ export const Hero = () => {
 					projects up and running quickly
 				</p>
 				<div className='btnContainer flex'>
-					<button>
+					
 						<Link to='/contact-us'>Get In Touch</Link>
-					</button>
+					
 					<img src={Ornament} alt='' className='mx-4' />
 				</div>
 				<img src={Flower} alt='' className='' />

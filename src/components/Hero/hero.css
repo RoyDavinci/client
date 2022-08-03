@@ -27,12 +27,16 @@
 		content: "Deploy";
 	}
 }
-.hero-textContainer button {
+.hero-textContainer a, .hero-textContainer a:hover, .hero-textContainer a:focus , .hero-textContainer a:active {
 	background: linear-gradient(to right, #fd7e14, #ea4b1f);
 	width: 161px;
 	height: 52px;
 	color: #fff;
 	border-radius: 10px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 .hero-imgContainer img {
