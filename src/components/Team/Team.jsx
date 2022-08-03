@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./team.css";
-import FirstImage from "../../images/users/unsplash_8YG31Xn4dSw.png";
-import ThirdImage from "../../images/users/unsplash_ABuzWPku1Ug.png";
 import OyenFirst from "../../images/oyen/oyen.JPG";
 import OyenSecond from "../../images/oyen/FDF91F93-CDE5-4516-B470-B271AC92A7D7.JPG";
 import EmmaunelFirst from "../../images/emmanuel/emmanuel2.JPG";
@@ -16,6 +14,12 @@ import IsaacFirst from "../../images/isaac/isaac.jpg";
 import IsaacSecond from "../../images/isaac/isaac1.HEIC";
 import OlamideFirst from "../../images/olamide/3ACF9F54-0E12-427A-94B9-F1EC0224EB6C.JPG";
 import OlamideSecond from "../../images/olamide/photo_2022-08-01_15-25-24.jpg";
+import RachelFirst from "../..//images/rachel/rachel.jpeg";
+import RachelSecond from "../../images/rachel/rachel1.jpeg"
+import JoshuaFirst from "../../images/joshua/joshua.jpeg";
+import JoshuaSecond from "../../images/joshua/joshua1.jpeg";
+import { Link } from "react-router-dom";
+
 
 const teams = [
 	{
@@ -23,7 +27,25 @@ const teams = [
 		name: "Oyen Avanrenren",
 		title: "Project Manager and Scrum Master",
 		image: OyenFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				link:"/",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://www.linkedin.com/in/oyen-avanrenren",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"https://instagram.com/mz_avans?igshid=YmMyMTA2M2Y=",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: OyenSecond,
 	},
 	{
@@ -31,7 +53,25 @@ const teams = [
 		name: "MAthias Roy",
 		title: "FullStack Developer",
 		image: RoyFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"/",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://www.linkedin.com/in/emmanuel-mathias-0519b6147/",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"https://twitter.com/roydavinci5",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: RoySecond,
 	},
 	{
@@ -39,7 +79,25 @@ const teams = [
 		name: "Kola",
 		title: "Mobile App Developer",
 		image: KolaFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://LinkedIn.com/joshuajumbo91",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"https://twitter.com/blissfuljoe",
+				icon:"fa-b fa-twitter"
+			}, 
+			{
+				link:"https://instagram.com/jumbo_joshua",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: KolaSecond,
 	},
 	{
@@ -47,7 +105,25 @@ const teams = [
 		name: "Gladys Glo",
 		title: "HR ",
 		image: GladysFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"",
+				icon:"fa-brands fa-facebook-f"
+			}, 
+			{
+				link:"www.linkedin.com/in/gladys-robert-akpan",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: GladysSecond,
 	},
 	{
@@ -55,7 +131,25 @@ const teams = [
 		name: "Isaac Warri",
 		title: "FrontEnd Developer",
 		image: IsaacFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"/",
+				icon:"fa-brands fa-facebook-f"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brnads fa-twitter"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: IsaacSecond,
 	},
 	{
@@ -63,7 +157,25 @@ const teams = [
 		name: "Emmanuel Chidera",
 		title: "Backend Developer",
 		image: EmmaunelFirst,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"",
+				icon:"fab fa-facebook-f",
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: EmmanuelSecond,
 	},
 	{
@@ -71,16 +183,79 @@ const teams = [
 		name: "Olamide  Omotere",
 		title: "Principal Consultant",
 		image: OlamideSecond,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
+		social: [
+			{
+				"facebook":"",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"/",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
 		secondImage: OlamideFirst,
 	},
 	{
 		id: 8,
-		name: "John Doe",
-		title: "CEO and Founder",
-		image: FirstImage,
-		social: ["facebook", "linkedin", "twitter", "instagram"],
-		secondImage: ThirdImage,
+		name: "Raquel",
+		title: "Product Designer",
+		image: RachelFirst,
+		
+		social: [
+			{
+				"facebook":"",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://www.linkedin.com/in/jumokegeorge",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"https://twitter.com/designa_Rakel",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"https://instagram.com/jumbo_joshua",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
+		secondImage: RachelSecond,
+	},
+	{
+		id: 9,
+		name: "Joshua",
+		title: "Product Designer",
+		image: JoshuaFirst,
+		social: [
+			{
+				"facebook":"",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://LinkedIn.com/joshuajumbo91",
+				icon:"fa-brands fa-instagram"
+			}, 
+			{
+				link:"https://twitter.com/blissfuljoe",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"https://instagram.com/jumbo_joshua",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
+		secondImage: JoshuaSecond,
 	},
 ];
 
@@ -90,6 +265,9 @@ export const Team = () => {
 	const onHovered = (id) => {
 		setTeamMember(id);
 	};
+	const onUnHovered = () => {
+		setTeamMember(null);
+	}
 
 	return (
 		<div className='p-12 text-center bg-[#041243] text-[#fff]'>
@@ -111,6 +289,7 @@ export const Team = () => {
 									: "team-imageContainer-item cursor-pointer"
 							}`}
 							onMouseEnter={() => onHovered(index)}
+							onMouseLeave={onUnHovered}
 						>
 							<div className='teamMember__imageContainerPerson'>
 								<img
@@ -138,9 +317,19 @@ export const Team = () => {
 										: "teamContainer__socialMedia__items teamHide"
 								}
 							>
-								<i className='fa-brands fa-linkedin'></i>
-								<i className='fa-brands fa-twitter'></i>
-								<i className='fa-brands fa-instagram'></i>
+								{team.social.map((social, index) => {
+									return (
+										<>
+											<a
+											key={index}
+											href={social.link}
+											className='teamContainer__socialMedia__items__item'
+										>
+											<i className={`${social.icon}`}></i>
+										</a>
+										</>
+									);
+								})}
 							</div>
 						</div>
 					);
