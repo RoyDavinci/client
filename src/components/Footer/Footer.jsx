@@ -44,9 +44,13 @@ export const Footer = () => {
 					<p>- info@malonglobaltech.com</p>
 					<p>- 07026997992</p>
 					<div className='socials my-4'>
-						<i className='fa-brands fa-facebook-f'></i>
-						<i className='fa-brands fa-twitter'></i>
+						<Link to='/'><i className='fa-brands fa-facebook-f'></i></Link>
+						<a href='https://instagram.com/malontech?igshid=NDBlY2NjN2I='>
 						<i className='fa-brands fa-instagram'></i>
+						</a>
+						<a href='https://www.linkedin.com/company/malongtech'>
+						<i className='fa-brands fa-linkedin'></i>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -18,7 +18,7 @@ import RachelFirst from "../..//images/rachel/rachel.jpeg";
 import RachelSecond from "../../images/rachel/rachel1.jpeg"
 import JoshuaFirst from "../../images/joshua/joshua.jpeg";
 import JoshuaSecond from "../../images/joshua/joshua1.jpeg";
-import { Link } from "react-router-dom";
+import RafiatFirst from "../../images/rafiat/rafiat.jpg"
 
 
 const teams = [
@@ -243,7 +243,7 @@ const teams = [
 			}, 
 			{
 				link:"https://LinkedIn.com/joshuajumbo91",
-				icon:"fa-brands fa-instagram"
+				icon:"fa-brands fa-linkedin"
 			}, 
 			{
 				link:"https://twitter.com/blissfuljoe",
@@ -256,6 +256,32 @@ const teams = [
 		
 		],
 		secondImage: JoshuaSecond,
+	},
+	{
+		id: 10,
+		name: "Rafiat",
+		title: "Mobile Developer",
+		image: RafiatFirst,
+		social: [
+			{
+				link:"/",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://www.linkedin.com/in/rafiat-sulaimon-54b817205",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"https://twitter.com/Olorirefam",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"https://instagram.com/raffysul",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
+		secondImage: RafiatFirst,
 	},
 ];
 
