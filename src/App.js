@@ -21,17 +21,6 @@ import { CreateBlogContainer } from "./pages/CreateBlogContainer/CreateBlogConta
 function App() {
 	const dispatch = useDispatch();
 	const initial = useSelector(defaultState);
-	// const [admin, setAdmin] = useState("");
-	// let location = useLocation();
-
-	// const ProtectedRoute = () => {
-	//     return admin ? <Outlet /> : <Navigate to="/admin/login" state={{ from: location }} />;
-	// };
-
-	// useEffect(() => {
-	//     const token = localStorage.getItem("admin");
-	//     setAdmin(token);
-	// }, [admin]);
 
 	return (
 		<div
@@ -40,7 +29,7 @@ function App() {
 			}`}
 		>
 			<Routes>
-				<Route path='/' element={<Home />}></Route>
+				<Route exact path='/' element={<Home />}></Route>
 				<Route path='/careers' element={<Career />}></Route>
 				<Route path='/contact-us' element={<Contact />}></Route>
 				<Route path='/portfolio' element={<Portfolio />}></Route>
@@ -60,13 +49,7 @@ function App() {
 					path='/admin/create/jobs'
 					element={<CreateTeamContainer></CreateTeamContainer>}
 				></Route>
-				{/* <Route exact path='/' element={<ProtectedRoute />}>
-						<Route path='/admin' element={<Admin />}></Route>
-						<Route path='/admin/jobs' element={<Jobs></Jobs>}></Route>
-						<Route path='/admin/whats-new' element={<Blog />}></Route>
-					</Route> */}
 				<Route path='/admin/login' element={<Auth />}></Route>
-				<Route path='*' element={<p>There's nothing here: 404!</p>} />
 			</Routes>
 			<div className='switchContainer'>
 				<label className='switch'>
