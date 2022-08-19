@@ -75,15 +75,20 @@
 	position: absolute;
 	color: #fff;
 }
+.teanContainer__detailsContainer__person{
+	margin: 0 auto;
+}
 .teamMember__personContainer {
 	bottom: 15px;
 	text-align: center;
 	width: 80%;
 	background-color: black;
 	opacity: 0.8;
+	left: 50%;
+    transform: translate(-50%, 0);
 	/* margin: 0 auto; */
-	transform: translate(-50%, 0);
-	left: 45%;
+	/* transform: translate(-50%, 0);
+	left: 45% */
 }
 .teamContainer__socialMedia__items {
 	top: 50%;

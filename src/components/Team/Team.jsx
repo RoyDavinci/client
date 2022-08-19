@@ -19,6 +19,8 @@ import RachelSecond from "../../images/rachel/rachel1.jpeg"
 import JoshuaFirst from "../../images/joshua/joshua.jpeg";
 import JoshuaSecond from "../../images/joshua/joshua1.jpeg";
 import RafiatFirst from "../../images/rafiat/rafiat.jpg"
+import AndrewFirst from "../../images/andrew/photo_2022-08-17 18.04.44.jpeg"
+import AndrewSecond from "../../images/andrew/photo_2022-08-17 18.04.49.jpeg"
 
 
 const teams = [
@@ -50,7 +52,7 @@ const teams = [
 	},
 	{
 		id: 2,
-		name: "MAthias Roy",
+		name: "Mathias Roy",
 		title: "FullStack Developer",
 		image: RoyFirst,
 		social: [
@@ -282,6 +284,32 @@ const teams = [
 		
 		],
 		secondImage: RafiatFirst,
+	},
+	{
+		id: 10,
+		name: "Andrew",
+		title: "Tech Lead",
+		image: AndrewFirst,
+		social: [
+			{
+				link:"/",
+				icon:"fab fa-facebook-f"
+			}, 
+			{
+				link:"https://www.linkedin.com/in/andrew-wams-9184a8112/",
+				icon:"fa-brands fa-linkedin"
+			}, 
+			{
+				link:"https://twitter.com/wamscode",
+				icon:"fa-brands fa-twitter"
+			}, 
+			{
+				link:"",
+				icon:"fa-brands fa-instagram"
+			}
+		
+		],
+		secondImage: AndrewSecond,
 	},
 ];
 

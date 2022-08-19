@@ -1,4 +1,5 @@
 import React from "react";
+import "./home.css"
 import {
 	Hero,
 	About,
@@ -39,9 +40,7 @@ export const Home = () => {
 					}`}
 				>
 					<h1 className='md:mx-4'>Do You Have A Project In Mind? </h1>
-					<Button detail='Get In Touch'>
-						<Link to='/contact-us'></Link>
-					</Button>
+					<Link to='/contact-us'>Get in Touch</Link>
 				</div>
 			</div>
 			<Footer></Footer>
